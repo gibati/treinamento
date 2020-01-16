@@ -74,3 +74,16 @@ if [ $return_file_permission = '2' ];then
 else
   echo -e "Exercício 7-$cod_fail"
 fi
+
+# Exercicio8
+if [ -L /etc/localtime ] ; then
+  return=$(ls -l /etc/localtime | grep Sao_Paulo | wc -l)
+  if [ $return = '1' ];then
+    echo -e "Exercício 8-$cod_ok"
+  else
+    echo -e "Exercício 8-$cod_fail"
+  fi
+fi
+
+
+  
