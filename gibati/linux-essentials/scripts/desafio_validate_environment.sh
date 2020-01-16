@@ -83,7 +83,19 @@ if [ -L /etc/localtime ] ; then
   else
     echo -e "Exercício 8-$cod_fail"
   fi
+fi 
+
+# Exercicio9
+file_quantidade_all="$(find $dir_desafio -type f | wc -l)"
+if [ $file_quantidade_all = '3' ]; then
+  return=$(for i in $file_1 $file_2 $file_3; do
+            find $dir_desafio -type f -name "$i";
+          done | wc -l)
+  if [ $return = '3' ]; then
+    echo -e "Exercício 9-$cod_ok"
+  else
+    echo -e "Exercício 9-$cod_fail"
+  fi
+else
+  echo -e "Exercício 9-$cod_fail"
 fi
-
-
-  
