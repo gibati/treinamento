@@ -47,7 +47,7 @@ if [ $return_1 = 0 ] && [ $return_2 = 0 ]; then
     echo -e "Exercício 4-$cod_fail"
   fi
 else
-  echo -e "Exercício aqui4-$cod_fail"
+  echo -e "Exercício 4-$cod_fail"
 fi
 
 # Exercicio5
