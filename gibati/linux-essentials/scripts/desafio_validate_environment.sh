@@ -10,6 +10,7 @@ user1="maria"
 user2="jose"
 file_1="user1.conf"
 file_2="user2.conf"
+file_3="tux.html"
 
 # Exercicio1
 if [ -d $dir_desafio ]; then
@@ -57,4 +58,11 @@ if [ "$ip_fqdn_1" = '8.8.8.8' ] && [ "$ip_fqdn_2" = '8.8.4.4' ]; then
   echo -e "Exercício 5-$cod_ok"
 else
   echo -e "Exercício 5-$cod_fail"
+fi
+
+# Exercicio6
+if [ -e /usr/games/cowsay ] && [ -s $dir_desafio/$file_3 ]; then
+  echo -e "Exercício 6-$cod_ok"
+else
+  echo -e "Exercício 6-$cod_fail"
 fi
