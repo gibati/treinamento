@@ -16,6 +16,12 @@ ssh-keygen -t rsa -b 4096 -f /tmp/<seu_nome>-key -P "senha" -C "Chave de acesso 
 useradd -m -d /home/<seu_usuario> -s /bin/bash -c "Treinamento - Linux" -U <seu_usuario>
 ```
 
+- Deixa a autenticação do usuário por chave
+```console
+mkdir /home/<seu_usuario>/.ssh/
+mv /tmp/<chave>.pub /home/<seu_usuario>/.ssh/
+```
+
 -Incluir no sudoers para ter acesso root sem password
 ```console
 vim /etc/sudoers.d/90-cloud-init-users
@@ -25,5 +31,4 @@ vim /etc/sudoers.d/90-cloud-init-users
 ```console
 chmod 400 <treinamento.pem>
 echo "<seu_usuario> ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers.d/90-cloud-init-users
-
 ```
