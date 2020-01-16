@@ -66,3 +66,11 @@ if [ -e /usr/games/cowsay ] && [ -s $dir_desafio/$file_3 ]; then
 else
   echo -e "Exercício 6-$cod_fail"
 fi
+
+# Exercicio7
+return_file_permission=$(find $dir_desafio -type f -perm 0765 -name "*.conf" -print | wc -l)
+if [ $return_file_permission = '2' ];then
+  echo -e "Exercício 7-$cod_ok"
+else
+  echo -e "Exercício 7-$cod_fail"
+fi
