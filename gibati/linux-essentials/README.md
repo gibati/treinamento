@@ -32,3 +32,26 @@ vim /etc/sudoers.d/90-cloud-init-users
 chmod 400 <treinamento.pem>
 echo "<seu_usuario> ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers.d/90-cloud-init-users
 ```
+
+- Meus primeiros comandos
+```console
+man     - an interface to the on-line reference manuals
+cd      - access a directory
+rm      - remove files or directories
+mv      - move (rename) files
+ls      - list directory contents
+who     - show who is logged on
+mkdir   - make directories
+head    - output the first part of files
+more    - file perusal filter for crt viewing
+uptime  - tell how long the system has been running.
+whoami  - print effective userid
+df -kh  - report file system disk space usage
+top     - display Linux processes
+ps      - report a snapshot of the current processes.
+kill    - send a signal to a process
+free    - Display amount of free and used memory in the system
+dmidecode - DMI table decoder
+apt     - package management system
+grep, egrep, fgrep, rgrep - print lines matching a pattern
+```
