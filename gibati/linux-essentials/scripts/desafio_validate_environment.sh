@@ -48,3 +48,13 @@ if [ $return_1 = 0 ] && [ $return_2 = 0 ]; then
 else
   echo -e "Exercício aqui4-$cod_fail"
 fi
+
+# Exercicio5
+ip_fqdn_1="$(host $user1.desafio1.com.br | head -1| awk '{print $4}')"
+ip_fqdn_2="$(host $user2.desafio1.com.br | head -1| awk '{print $4}')"
+
+if [ "$ip_fqdn_1" = '8.8.8.8' ] && [ "$ip_fqdn_2" = '8.8.4.4' ]; then
+  echo -e "Exercício 5-$cod_ok"
+else
+  echo -e "Exercício 5-$cod_fail"
+fi
