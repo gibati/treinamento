@@ -99,3 +99,11 @@ if [ $file_quantidade_all = '3' ]; then
 else
   echo -e "Exercício 9-$cod_fail"
 fi
+
+# Exercicio10
+disk_used="$(df -kh / | grep '/dev/xvda1' | awk '{print $5}' | sed 's/%//g')"
+if [ $disk_used -lt '50' ];then
+  echo -e "Exercício 10-$cod_ok"
+else
+  echo -e "Exercício 10-$cod_fail"
+fi
